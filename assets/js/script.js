@@ -1,4 +1,4 @@
-// create global variables that target the elements we will need for DOM traversal
+// Global variables that target the elements needed for DOM traversal
  var timeEl = document.getElementById("time");
  var startContainer = document.getElementById('start');
  var startButton = document.getElementById('start-button');
@@ -19,7 +19,7 @@
 questionsContainer.style.display = "none";
 initialsContainer.style.display = "none";
 
-// create an array of objects to store your questions, answers and choices
+// Array of objects to store questions, answers and choices
 var questions = [
   {
     question: "1. What does HTML stand for",
@@ -43,11 +43,7 @@ var questions = [
   }
 ]
 
-console.log(questions);
-// create a start function
-// GIVEN I am taking a code quiz         
-// WHEN I click the start button
-
+// Timer function
 function timer(){
     timeEl.textContent = secondsLeft 
      timerInterval = setInterval(function() {
@@ -62,17 +58,10 @@ function timer(){
         }
     
       }, 1000);
-    // THEN a timer starts and I am presented with a question
-    // WHEN I answer a question
-    // THEN I am presented with another question
-    // WHEN I answer a question incorrectly
-    // THEN time is subtracted from the clock
-    // WHEN all questions are answered or the timer reaches 0
-    // THEN the game is over
-    // WHEN the game is over
-    // THEN I can save my initials and score
 
 }
+
+// Start function
 var startQuiz = function(){
   timer();
   startContainer.style.display = "none";
@@ -80,10 +69,7 @@ var startQuiz = function(){
   nextQuestion();
 }
 
-
-
-
-// create an event listener for the button click
+// Moves to next question
 var nextQuestion = function(){
   titleEl.textContent = questions[questionIndex].question;
   choice1.textContent = questions[questionIndex].choices[0];
@@ -95,25 +81,24 @@ var nextQuestion = function(){
 function checkAnswer(answer) {
 
   if (questions[questionIndex].answer === questions[questionIndex].choices[answer]) {
-      // correct answer, add 1 score to final score
+  // Correct answer, add 1 score to final score
       secondsLeft += 10;
       timeEl.textContent = secondsLeft;
   } else {
-      // wrong answer, deduct 10 second from timer
+  // Wrong answer, deduct 10 second from timer
       secondsLeft -= 10;
       timeEl.textContent = secondsLeft;
   }
 
   questionIndex++;
-  // repeat with the rest of questions 
+  // Repeat with the rest of questions 
   if (questionIndex < questions.length) {
       nextQuestion();
   } else {
-      // if no more question, run game over function
+  // If no more question, run game over function
       gameOver();
   }
 }
-
 
 var chose1 = function(){
   checkAnswer(0);
@@ -128,21 +113,18 @@ var chose4 = function(){
   checkAnswer(3);
 }
 
+// Game over function
 function gameOver() {
   initialsContainer.style.display = "block";
   questionsContainer.style.display = "none";
   startContainer.style.display = "none";
   timeEl.style.display = "none";
 
-  // show final score
+// Shows final score
   finalScore.textContent = secondsLeft;
 }
 
-
-
-
-
-
+// Event listener for the button click
 startButton.addEventListener('click', startQuiz)
 choice1.addEventListener("click", chose1);
 choice2.addEventListener("click", chose2);
