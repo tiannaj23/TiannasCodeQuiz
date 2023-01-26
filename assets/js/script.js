@@ -128,6 +128,11 @@ function gameOver() {
   finalScore.textContent = secondsLeft;
 }
 
+var newScore = {
+  score: timeEl,
+  initials: initialInputEl
+}
+
 function saveScores() {
 
 }
