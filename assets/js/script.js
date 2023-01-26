@@ -6,7 +6,7 @@
  var titleEl = document.getElementById('title');
  var buttonsEl = document.getElementById('buttons');
  var initialsContainer = document.getElementById('initials');
- var initalInputEl = document.getElementById('initial-input');
+ var initialInputEl = document.getElementById('initial-input');
  var submitButton = document.getElementById('submit');
  var finalScore = document.getElementById('highScores');
  var timerInterval;
@@ -127,14 +127,23 @@ function gameOver() {
   finalScore.textContent = secondsLeft;
 }
 
-var newScore = {
-  score: timeEl,
-  initials: initialInputEl
-}
-
 function saveScores() {
+  var userInitials = initialInputEl.value.trim();
+  console.log(userInitials);
+
+  var highscores = JSON.parse(window.localStorage.getItem('highscores')) || [];
+
+  var newScore = {
+    score: timeEl,
+    initials: userInitials
+  }
+
+  //push newScore into highscores
+
+  //set highscores to local storage (look at how we used getItem above its really similar)
 
 }
+
 // Event listener for the button click
 startButton.addEventListener('click', startQuiz)
 submitButton.addEventListener('click', saveScores)
