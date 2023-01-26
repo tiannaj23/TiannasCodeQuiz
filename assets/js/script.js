@@ -23,27 +23,27 @@ initialsContainer.style.display = "none";
 // Array of objects to store questions, answers and choices
 var questions = [
   {
-    question: "1. What does HTML stand for",
+    question: "What does HTML stand for",
     choices: ["1. Hello Thanks Michelle Love", "2. Hyper Text Markup Language", "3. High Top Moose Limo", "4. Hippo Top Mountain Lion"],
     answer: "2. Hyper Text Markup Language"
   },
   {
-    question: "2. What is considered to be the most popular programming language in the world?",
+    question: "What is considered to be the most popular programming language in the world?",
     choices: ["1. HTML","2. CSS","3. JavaScript","4. JQuery "],
     answer: "3. JavaScript"
   },
   {
-    question: "3. What is the element called that can continue to execute a block of code as long as the specified condition remains TRUE?",
+    question: "What is the element called that can continue to execute a block of code as long as the specified condition remains TRUE?",
     choices: ["1. Clone","2. Debugger","3. Repeater","4. Loop"],
     answer: "4. Loop"
   },
   {
-    question: "4. In JavaScript, what element is used to store and manipulate text, usually in multiples?",
+    question: "In JavaScript, what element is used to store and manipulate text, usually in multiples?",
     choices: ["1. Arrays","2. Strings","3. Recorders","4. Variables"],
     answer: "2. Strings"
   },
 {
-    question: "5. In JavaScript, what element is used to store multiple values in a single variable?",
+    question: "In JavaScript, what element is used to store multiple values in a single variable?",
     choices: ["1. Strings","2. Variables","3. Functions","4. Arrays"],
     answer: "4. Arrays"
 }
