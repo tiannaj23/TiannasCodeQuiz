@@ -53,20 +53,17 @@ function timer(){
     timeEl.textContent = secondsLeft 
      timerInterval = setInterval(function() {
         secondsLeft--;
-        timeEl.textContent = secondsLeft 
+        timeEl.textContent = secondsLeft + 's'
 
         if(secondsLeft === 0) {
-          // Stops execution of action at set interval
-          clearInterval(timerInterval);
-          // Calls function to create and append image
-         
+          // Use `clearInterval()` to stop the timer
+          clearInterval(timerInterval);  
         }
-    
       }, 1000);
 
 }
 
-// Start function
+// Start quiz
 var startQuiz = function(){
   timer();
   startContainer.style.display = "none";
