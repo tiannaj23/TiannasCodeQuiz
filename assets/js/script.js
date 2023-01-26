@@ -8,6 +8,8 @@
  var initialsContainer = document.getElementById('initials');
  var initalInputEl = document.getElementById('initial-input');
  var submitButton = document.getElementById('submit');
+ var finalScore = document.getElementById('highScores');
+
  var timerInterval;
  var secondsLeft = 60;
  var choice1 = document.getElementById("button1");
@@ -126,8 +128,12 @@ function gameOver() {
   finalScore.textContent = secondsLeft;
 }
 
+function saveScores() {
+
+}
 // Event listener for the button click
 startButton.addEventListener('click', startQuiz)
+submitButton.addEventListener('click', saveScores)
 choice1.addEventListener("click", chose1);
 choice2.addEventListener("click", chose2);
 choice3.addEventListener("click", chose3);
