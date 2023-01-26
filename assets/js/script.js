@@ -9,7 +9,6 @@
  var initalInputEl = document.getElementById('initial-input');
  var submitButton = document.getElementById('submit');
  var finalScore = document.getElementById('highScores');
-
  var timerInterval;
  var secondsLeft = 60;
  var choice1 = document.getElementById("button1");
@@ -116,7 +115,7 @@ var chose3 = function(){
 var chose4 = function(){
   checkAnswer(3);
 }
-
+ 
 // Game over function
 function gameOver() {
   initialsContainer.style.display = "block";
