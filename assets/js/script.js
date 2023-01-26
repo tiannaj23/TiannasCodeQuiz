@@ -74,6 +74,10 @@ var startQuiz = function(){
 
 // Moves to next question
 var nextQuestion = function(){
+  questionTitleEl.textContent = questions[questionIndex].question;
+  for (let i = 0; i <questions[questionsIndex].choices.length; i++) {
+    
+  }
   titleEl.textContent = questions[questionIndex].question;
   choice1.textContent = questions[questionIndex].choices[0];
   choice2.textContent = questions[questionIndex].choices[1];
@@ -94,12 +98,13 @@ function checkAnswer(answer) {
   }
 
   questionIndex++;
+  console.log(questionIndex);
   // Repeat with the rest of questions 
-  if (questionIndex < questions.length) {
-      nextQuestion();
+  if (questionIndex === questions.length || secondsLeft <= 0) {
+    gameOver();
   } else {
   // If no more question, run game over function
-      gameOver();
+    nextQuestion();
   }
 }
 
