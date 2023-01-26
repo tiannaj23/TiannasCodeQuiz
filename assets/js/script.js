@@ -27,20 +27,25 @@ var questions = [
     answer: "2. Hyper Text Markup Language"
   },
   {
-    question: "2. What is your favorite color?",
-    choices: ["1. Red","2. Blue","3. Green","4. Yellow"],
-    answer: "1. Red"
+    question: "2. What is considered to be the most popular programming language in the world?",
+    choices: ["1. HTML","2. CSS","3. JavaScript","4. JQuery "],
+    answer: "1. JavaScript"
   },
   {
-    question: "3. What is your favorite color?",
-    choices: ["1. Red","2. Blue","3. Green","4. Yellow"],
-    answer: "2. Blue"
+    question: "3. What is the element called that can continue to execute a block of code as long as the specified condition remains TRUE?",
+    choices: ["1. Clone","2. Debugger","3. Repeater","4. Loop"],
+    answer: "2. Loop"
   },
   {
-    question: "4. What does HTML stand for",
-    choices: ["1. Hello Thanks Michelle Love","2. Hyper Text Markup Language","3. High Top Moose Limo","4. Hippo Top Mountain Lion"],
-    answer: "3. High Top Moose Limo"
-  }
+    question: "4. In JavaScript, what element is used to store and manipulate text, usually in multiples?",
+    choices: ["1. Arrays","2. Strings","3. Recorders","4. Variables"],
+    answer: "3. Strings"
+  },
+{
+  question: "4. In JavaScript, what element is used to store multiple values in a single variable?",
+  choices: ["1. Strings","2. Variables","3. Functions","4. Arrays"],
+  answer: "3. Arrays"
+}
 ]
 
 // Timer function
