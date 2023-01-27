@@ -74,11 +74,6 @@ var startQuiz = function(){
 
 // Moves to next question
 var nextQuestion = function(){
-  questionTitleEl.textContent = questions[questionIndex].question;
-  for (let i = 0; i <questions[questionsIndex].choices.length; i++) {
-    const choice = questions[questionIndex].choices[i];
-    var btnEl = document.createElement("button");
-  }
   titleEl.textContent = questions[questionIndex].question;
   choice1.textContent = questions[questionIndex].choices[0];
   choice2.textContent = questions[questionIndex].choices[1];
@@ -86,8 +81,8 @@ var nextQuestion = function(){
   choice4.textContent = questions[questionIndex].choices[3];
 }
 
-function checkAnswer(event) {
-  var btnClick = event.target
+function checkAnswer(answer) {
+
   if (questions[questionIndex].answer === questions[questionIndex].choices[answer]) {
   // Correct answer, add 1 score to final score
       secondsLeft += 10;
@@ -99,13 +94,12 @@ function checkAnswer(event) {
   }
 
   questionIndex++;
-  console.log(questionIndex);
   // Repeat with the rest of questions 
-  if (questionIndex === questions.length || secondsLeft <= 0) {
-    gameOver();
+  if (questionIndex < questions.length) {
+      nextQuestion();
   } else {
   // If no more question, run game over function
-    nextQuestion();
+      gameOver();
   }
 }
 
