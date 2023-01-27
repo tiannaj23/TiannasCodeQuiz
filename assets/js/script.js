@@ -140,8 +140,8 @@ function saveScores() {
 
   //push newScore into highscores
 
-  //set highscores to local storage (look at how we used getItem above its really similar)
-
+  //set highscores to local storage 
+  localStorage.setItem("highscores", JSON.stringify(highscores));
 }
 
 // Event listener for the button click
