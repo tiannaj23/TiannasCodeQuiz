@@ -20,9 +20,9 @@ To navigate Tianna's Code Quiz website, click the "start" button. You will be pr
 
 The following screenshot shows the deployed website and the link will take you to live deployed website.
 
-![screen shot](./images/FirstQuestion.jpeg)
-![screen shot](./images/SecondQuestion.jpeg)
-![screen shot](./images/ThirdQuestion.jpeg)
-![screen shot](./images/FourthQuestion.jpeg)
-![screen shot](./images/FifthQuestion.jpeg)
-![screen shot](./images/LastPage.jpeg)
+![screen shot](./images/First Question.jpeg)
+![screen shot](./images/Second Question.jpeg)
+![screen shot](./images/Third Question.jpeg)
+![screen shot](./images/Fourth Question.jpeg)
+![screen shot](./images/Fifth Question.jpeg)
+![screen shot](./images/Last Page.jpeg)
